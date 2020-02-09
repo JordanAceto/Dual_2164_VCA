@@ -208,7 +208,7 @@ AR Path="/5E48E312/5E985A4A" Ref="R?"  Part="1"
 AR Path="/5E4A0387/5E985A4A" Ref="R?"  Part="1" 
 AR Path="/5E4A03B7/5E985A4A" Ref="R11"  Part="1" 
 F 0 "R11" V 5650 4350 50  0000 C CNN
-F 1 "???" V 5750 4350 50  0000 C CNN
+F 1 "100k" V 5750 4350 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5680 4350 50  0001 C CNN
 F 3 "~" H 5750 4350 50  0001 C CNN
 	1    5750 4350
@@ -328,10 +328,7 @@ Wire Wire Line
 Wire Wire Line
 	5400 4900 5400 4800
 Wire Wire Line
-	4850 5600 6450 5600
-Wire Wire Line
 	6450 5600 6450 2900
-Connection ~ 4850 5600
 $Comp
 L Amplifier_Operational:TL072 U?
 U 1 1 5E985A89
@@ -485,4 +482,51 @@ Wire Wire Line
 	6050 4500 6050 4350
 Wire Wire Line
 	6050 4350 5900 4350
+$Comp
+L Device:R R27
+U 1 1 5E477841
+P 5950 5600
+F 0 "R27" V 5850 5600 50  0000 C CNN
+F 1 "4k7" V 5950 5600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5880 5600 50  0001 C CNN
+F 3 "~" H 5950 5600 50  0001 C CNN
+	1    5950 5600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R26
+U 1 1 5E477BC7
+P 3600 4350
+F 0 "R26" V 3500 4350 50  0000 C CNN
+F 1 "10M" V 3600 4350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3530 4350 50  0001 C CNN
+F 3 "~" H 3600 4350 50  0001 C CNN
+	1    3600 4350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6100 5600 6450 5600
+Wire Wire Line
+	5800 5600 4850 5600
+Connection ~ 4850 5600
+$Comp
+L power:-5VA #PWR?
+U 1 1 5E47EFD7
+P 3300 4500
+AR Path="/5E48E312/5E47EFD7" Ref="#PWR?"  Part="1" 
+AR Path="/5E4A03B7/5E47EFD7" Ref="#PWR016"  Part="1" 
+F 0 "#PWR016" H 3300 4600 50  0001 C CNN
+F 1 "-5VA" H 3315 4673 50  0000 C CNN
+F 2 "" H 3300 4500 50  0001 C CNN
+F 3 "" H 3300 4500 50  0001 C CNN
+	1    3300 4500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3300 4500 3300 4350
+Wire Wire Line
+	3300 4350 3450 4350
+Wire Wire Line
+	3750 4350 3950 4350
+Connection ~ 3950 4350
 $EndSCHEMATC

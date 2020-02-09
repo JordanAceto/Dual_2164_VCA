@@ -87,7 +87,7 @@ AR Path="/5E9B011E" Ref="R?"  Part="1"
 AR Path="/5E48E312/5E9B011E" Ref="R19"  Part="1" 
 AR Path="/5E4A0387/5E9B011E" Ref="R?"  Part="1" 
 AR Path="/5E4A03B7/5E9B011E" Ref="R?"  Part="1" 
-F 0 "R19" H 6150 2900 50  0000 C CNN
+F 0 "R19" H 6100 2900 50  0000 C CNN
 F 1 "510" V 6250 2900 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6180 2900 50  0001 C CNN
 F 3 "~" H 6250 2900 50  0001 C CNN
@@ -310,10 +310,7 @@ Wire Wire Line
 Wire Wire Line
 	5750 4900 5750 4800
 Wire Wire Line
-	5200 5600 6800 5600
-Wire Wire Line
 	6800 5600 6800 2900
-Connection ~ 5200 5600
 $Comp
 L Amplifier_Operational:TL072 U?
 U 2 1 5E9B0189
@@ -459,7 +456,7 @@ AR Path="/5E48E312/5E9B01C9" Ref="R18"  Part="1"
 AR Path="/5E4A0387/5E9B01C9" Ref="R?"  Part="1" 
 AR Path="/5E4A03B7/5E9B01C9" Ref="R?"  Part="1" 
 F 0 "R18" V 6000 4350 50  0000 C CNN
-F 1 "???" V 6100 4350 50  0000 C CNN
+F 1 "100k" V 6100 4350 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6030 4350 50  0001 C CNN
 F 3 "~" H 6100 4350 50  0001 C CNN
 	1    6100 4350
@@ -485,4 +482,51 @@ Wire Wire Line
 Wire Wire Line
 	6400 4350 6250 4350
 Connection ~ 5750 4350
+$Comp
+L Device:R R25
+U 1 1 5E4607C4
+P 6250 5600
+F 0 "R25" V 6150 5600 50  0000 C CNN
+F 1 "4k7" V 6250 5600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6180 5600 50  0001 C CNN
+F 3 "~" H 6250 5600 50  0001 C CNN
+	1    6250 5600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6800 5600 6400 5600
+Wire Wire Line
+	6100 5600 5200 5600
+Connection ~ 5200 5600
+$Comp
+L Device:R R24
+U 1 1 5E468B49
+P 3950 4350
+F 0 "R24" V 3850 4350 50  0000 C CNN
+F 1 "10M" V 3950 4350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3880 4350 50  0001 C CNN
+F 3 "~" H 3950 4350 50  0001 C CNN
+	1    3950 4350
+	0    1    1    0   
+$EndComp
+$Comp
+L power:-5VA #PWR015
+U 1 1 5E46CA7E
+P 3650 4500
+AR Path="/5E48E312/5E46CA7E" Ref="#PWR015"  Part="1" 
+AR Path="/5E4A03B7/5E46CA7E" Ref="#PWR?"  Part="1" 
+F 0 "#PWR015" H 3650 4600 50  0001 C CNN
+F 1 "-5VA" H 3665 4673 50  0000 C CNN
+F 2 "" H 3650 4500 50  0001 C CNN
+F 3 "" H 3650 4500 50  0001 C CNN
+	1    3650 4500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3650 4500 3650 4350
+Wire Wire Line
+	3650 4350 3800 4350
+Wire Wire Line
+	4100 4350 4300 4350
+Connection ~ 4300 4350
 $EndSCHEMATC
