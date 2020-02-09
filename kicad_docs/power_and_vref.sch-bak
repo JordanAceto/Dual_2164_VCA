@@ -540,7 +540,7 @@ U 1 1 5E78CF37
 P 2150 2250
 F 0 "U6" H 1921 2296 50  0000 R CNN
 F 1 "MAX6035xxUR50" H 2750 2500 50  0000 R CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 2250 1950 50  0001 C CIN
+F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 2250 1950 50  0001 C CIN
 F 3 "https://datasheets.maximintegrated.com/en/ds/MAX6035.pdf" H 2250 1900 50  0001 C CIN
 	1    2150 2250
 	1    0    0    -1  

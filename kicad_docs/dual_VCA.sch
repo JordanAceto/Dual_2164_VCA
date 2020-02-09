@@ -236,14 +236,12 @@ Wire Wire Line
 	6150 1200 6800 1200
 Wire Wire Line
 	1700 5550 2400 5550
-Wire Wire Line
-	1700 4650 3800 4650
 $Comp
 L Device:R R1
 U 1 1 5E4B49AD
 P 3250 5850
 F 0 "R1" V 3150 5850 50  0000 C CNN
-F 1 "R" V 3250 5850 50  0000 C CNN
+F 1 "100k" V 3250 5850 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3180 5850 50  0001 C CNN
 F 3 "~" H 3250 5850 50  0001 C CNN
 	1    3250 5850
@@ -374,14 +372,12 @@ Wire Wire Line
 	1700 2100 2400 2100
 Wire Wire Line
 	2400 2100 2400 2250
-Wire Wire Line
-	1700 1200 3750 1200
 $Comp
 L Device:R R3
 U 1 1 5E4D11A3
 P 3200 2400
 F 0 "R3" V 3100 2400 50  0000 C CNN
-F 1 "R" V 3200 2400 50  0000 C CNN
+F 1 "100k" V 3200 2400 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3130 2400 50  0001 C CNN
 F 3 "~" H 3200 2400 50  0001 C CNN
 	1    3200 2400
@@ -486,12 +482,8 @@ Wire Wire Line
 	10100 1450 10250 1450
 Text Label 10250 1050 2    59   ~ 0
 signal_in_1
-Text Label 10250 1250 2    59   ~ 0
-CV_in_1
 Text Label 10250 1350 2    59   ~ 0
 offset_in_1
-Text Label 10250 1150 2    59   ~ 0
-signal_out_1
 $Comp
 L Connector_Generic:Conn_01x06 J9
 U 1 1 5EBD8F81
@@ -547,7 +539,7 @@ Text Label 3050 3350 2    59   ~ 0
 offset_in_1
 Text Label 6750 1200 2    59   ~ 0
 signal_out_1
-Text Label 3150 4650 2    59   ~ 0
+Text Label 2900 4650 2    59   ~ 0
 signal_in_2
 Text Label 3100 5850 2    59   ~ 0
 CV_in_2
@@ -557,4 +549,88 @@ Text Label 6800 4650 2    59   ~ 0
 signal_out_2
 Wire Wire Line
 	6200 4650 6850 4650
+$Comp
+L Device:C C24
+U 1 1 5E401C22
+P 3300 1200
+F 0 "C24" V 3048 1200 50  0000 C CNN
+F 1 "470nF" V 3139 1200 50  0000 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W3.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 3338 1050 50  0001 C CNN
+F 3 "~" H 3300 1200 50  0001 C CNN
+	1    3300 1200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3450 1200 3600 1200
+Wire Wire Line
+	3150 1200 3000 1200
+$Comp
+L Jumper:SolderJumper_2_Open JP1
+U 1 1 5E4046A9
+P 3300 800
+F 0 "JP1" H 3300 1005 50  0000 C CNN
+F 1 "AC/DC coupling" H 3300 914 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 3300 800 50  0001 C CNN
+F 3 "~" H 3300 800 50  0001 C CNN
+	1    3300 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 800  3000 800 
+Wire Wire Line
+	3000 800  3000 1200
+Connection ~ 3000 1200
+Wire Wire Line
+	3000 1200 1700 1200
+Wire Wire Line
+	3450 800  3600 800 
+Wire Wire Line
+	3600 800  3600 1200
+Connection ~ 3600 1200
+Wire Wire Line
+	3600 1200 3750 1200
+$Comp
+L Device:C C25
+U 1 1 5E409E9E
+P 3350 4650
+F 0 "C25" V 3098 4650 50  0000 C CNN
+F 1 "470nF" V 3189 4650 50  0000 C CNN
+F 2 "Capacitor_THT:C_Rect_L7.2mm_W3.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2" H 3388 4500 50  0001 C CNN
+F 3 "~" H 3350 4650 50  0001 C CNN
+	1    3350 4650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3500 4650 3650 4650
+Wire Wire Line
+	3200 4650 3050 4650
+$Comp
+L Jumper:SolderJumper_2_Open JP2
+U 1 1 5E409EA6
+P 3350 4250
+F 0 "JP2" H 3350 4455 50  0000 C CNN
+F 1 "AC/DC coupling" H 3350 4364 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 3350 4250 50  0001 C CNN
+F 3 "~" H 3350 4250 50  0001 C CNN
+	1    3350 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 4250 3050 4250
+Wire Wire Line
+	3050 4250 3050 4650
+Connection ~ 3050 4650
+Wire Wire Line
+	3050 4650 1700 4650
+Wire Wire Line
+	3500 4250 3650 4250
+Wire Wire Line
+	3650 4250 3650 4650
+Connection ~ 3650 4650
+Wire Wire Line
+	3650 4650 3800 4650
+Text Label 10250 1250 2    59   ~ 0
+CV_in_1
+Text Label 10250 1150 2    59   ~ 0
+signal_out_1
 $EndSCHEMATC
