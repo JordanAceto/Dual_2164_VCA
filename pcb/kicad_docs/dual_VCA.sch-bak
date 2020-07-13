@@ -635,4 +635,6 @@ Text Label 9850 1700 2    59   ~ 0
 signal_out_1
 Text Notes 8650 1350 0    157  ~ 0
 Use these ports \nif wiring by hand,\notherwise do not use
+NoConn ~ 6800 1300
+NoConn ~ 6850 4750
 $EndSCHEMATC

@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 4
 Title "Dual VCA power and vref components"
-Date "2020-02-08"
+Date "2020-07-13"
 Rev "1"
 Comp ""
 Comment1 "creativecommons.org/licenses/by/4.0"
@@ -278,33 +278,29 @@ Wire Wire Line
 $Comp
 L Device:R R?
 U 1 1 5E6E7316
-P 8300 5900
+P 8250 5900
 AR Path="/5E6E7316" Ref="R?"  Part="1" 
 AR Path="/5E6A7940/5E6E7316" Ref="R23"  Part="1" 
-F 0 "R23" V 8200 5900 50  0000 C CNN
-F 1 "R" V 8300 5900 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8230 5900 50  0001 C CNN
-F 3 "~" H 8300 5900 50  0001 C CNN
-	1    8300 5900
+F 0 "R23" V 8150 5900 50  0000 C CNN
+F 1 "opt" V 8250 5900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8180 5900 50  0001 C CNN
+F 3 "~" H 8250 5900 50  0001 C CNN
+	1    8250 5900
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	8150 5900 8100 5900
 $Comp
 L power:+12V #PWR?
 U 1 1 5E6E731D
-P 8500 5900
+P 8400 5900
 AR Path="/5E6E731D" Ref="#PWR?"  Part="1" 
 AR Path="/5E6A7940/5E6E731D" Ref="#PWR035"  Part="1" 
-F 0 "#PWR035" H 8500 5750 50  0001 C CNN
-F 1 "+12V" V 8515 6028 50  0000 L CNN
-F 2 "" H 8500 5900 50  0001 C CNN
-F 3 "" H 8500 5900 50  0001 C CNN
-	1    8500 5900
+F 0 "#PWR035" H 8400 5750 50  0001 C CNN
+F 1 "+12V" V 8415 6028 50  0000 L CNN
+F 2 "" H 8400 5900 50  0001 C CNN
+F 3 "" H 8400 5900 50  0001 C CNN
+	1    8400 5900
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	8500 5900 8450 5900
 $Comp
 L power:GND #PWR?
 U 1 1 5E6E7324
@@ -862,4 +858,40 @@ Wire Wire Line
 	10250 4850 10250 5000
 Text Notes 9100 4500 0    157  ~ 0
 2164 protection
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5F0D7AE2
+P 1050 4950
+F 0 "#FLG0101" H 1050 5025 50  0001 C CNN
+F 1 "PWR_FLAG" V 1050 5077 50  0000 L CNN
+F 2 "" H 1050 4950 50  0001 C CNN
+F 3 "~" H 1050 4950 50  0001 C CNN
+	1    1050 4950
+	0    -1   -1   0   
+$EndComp
+Connection ~ 1050 4950
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5F0D97C8
+P 1050 5150
+F 0 "#FLG0102" H 1050 5225 50  0001 C CNN
+F 1 "PWR_FLAG" V 1050 5277 50  0000 L CNN
+F 2 "" H 1050 5150 50  0001 C CNN
+F 3 "~" H 1050 5150 50  0001 C CNN
+	1    1050 5150
+	0    -1   -1   0   
+$EndComp
+Connection ~ 1050 5150
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5F0D9927
+P 1050 5350
+F 0 "#FLG0103" H 1050 5425 50  0001 C CNN
+F 1 "PWR_FLAG" V 1050 5477 50  0000 L CNN
+F 2 "" H 1050 5350 50  0001 C CNN
+F 3 "~" H 1050 5350 50  0001 C CNN
+	1    1050 5350
+	0    -1   -1   0   
+$EndComp
+Connection ~ 1050 5350
 $EndSCHEMATC
